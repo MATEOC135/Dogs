@@ -11,7 +11,7 @@ export default function Form (){
         weight: "",
         years: '',
         image: '',
-        temperaments: ""
+        temperaments:  []
       });
     const [temperaments, setTemperaments] = useState([])
     //---------------------------------min y max de peso
@@ -61,7 +61,7 @@ export default function Form (){
         weight: "",
         years: '',
         image: '',
-        temperaments:""
+        temperaments: []
         });
         console.log(errors)
 
@@ -157,7 +157,7 @@ export default function Form (){
             weight: "",
             years: '',
             image: '',
-            temperaments: ""
+            temperaments: []
         });
         window.alert("La Raza ha sido creada")
        

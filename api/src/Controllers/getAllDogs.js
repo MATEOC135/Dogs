@@ -11,12 +11,13 @@ const getAllDogs = async (req, res) => {
 
         if (name === "") {
 
-            const dbDogs = await Dog.findAll()
+            const dbDogs = await Dog.findAll({include: Temperaments
+            })
 
-            const allDo= [ ...dbDogs,...data]
+            const allDo= [ ...data,...dbDogs]
             res.status(200).json(allDo)
 
-            
+            console.log("aqui va el procesoooooooooooooooooooooooooooooooooooooo")
         } else {
             let searchName = name.toLowerCase()
             const dbDogs = await Dog.findAll({

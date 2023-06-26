@@ -7,7 +7,7 @@ export default function Card(props){
     return (
         <div className={Styles.card}>
         <div className={Styles.image}>
-          <img src={props.image.url} alt={props.name} />
+          <img src={props.image} alt={props.name} />
         </div>
         <div className={Styles.content}>
           <h2 className={Styles.title}>Nombre: {props.name}</h2>

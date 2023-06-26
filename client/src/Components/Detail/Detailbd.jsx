@@ -14,8 +14,16 @@ export default function Detailbd(){
           try {
             const { data } = await axios.get(`http://localhost:3001/dogs-bd/${id}`)
             console.log(data)
-            if (data) {
-              setCharacter(data)
+            console.log("aquivaaaaaaaaaaaaaaaaaaaaa")  
+            if (data) { 
+
+              const Ndata= data.temperaments.map(e=>e.name).join(", ")
+              const newData =  {
+                ...data,
+                temperaments:Ndata,
+              };
+           
+              setCharacter(newData)
             } else {
               window.alert("No hay detalles para esta Raza")
             }
@@ -29,15 +37,15 @@ export default function Detailbd(){
     return(
         <div className={Styles.card}>
         <div className={Styles.image}>
-          <img src={character.image}  alt={character.name} />
+          <img src={character?.image}  alt={character?.name} />
         </div>
         <div className={Styles.content}>
-            <h2> {character.id}</h2>
-          <h2 className={Styles.title}>Nombre: {character.name}</h2>
-          <p>{character.height}</p>
-          <p>Peso:{character.weight && character.weight} LBS</p> 
-            <p className={Styles.diets}>Temperamentos: {character.temperament}</p>
-            <p>{character.life_span}</p>
+            <h2> {character?.id}</h2>
+          <h2 className={Styles.title}>Nombre: {character?.name}</h2>
+          <p> ALTURA PROMEDIO: {character?.height} IMPERIAL  </p>
+          <p>PESO PROMEDIO: {character?.weight && character?.weight} LBS</p> 
+{            <p className={Styles.diets}>TEMPERAMENTOS ASOCIADOS: {character?.temperaments}</p>}
+            <p>EDAD PROMEDIO: {character?.years}</p>
 
           
         </div>

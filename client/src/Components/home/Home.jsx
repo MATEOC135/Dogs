@@ -109,11 +109,11 @@ console.log(currentDogs)
       <Link to={`/detailBd/${dog.id}`} key={dog.id}>  <Card key={dog.id}
       name={dog.name}
       image={dog.image} 
-      temperament={dog.temperament} 
+      temperament={dog.temperaments.map(e=>e.name)} 
       weight={dog.weight}
       /> </Link>:<Link to={`/apidet/${dog.id}`}  key={dog.id} ><Card key={dog.id}
     name={dog.name}
-    image={dog.image} 
+    image={dog.image.url} 
     temperament={dog.temperament}
     weight={dog.weight.imperial}
     /> </Link>

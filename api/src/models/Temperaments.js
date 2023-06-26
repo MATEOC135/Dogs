@@ -16,5 +16,8 @@ module.exports = (sequelize) => {
     },
 
 
+  },{
+    timestamps: false,
+    underscored: false, 
   });
 };
