@@ -43,8 +43,8 @@ export default function Apidet(){
         <div className={Styles.content}>
             <h2> {id}</h2>
           <h2 className={Styles.title}>Nombre: {name}</h2>
-          <p>{height?.metric}</p>
-          <p>Peso:{weight && weight?.metric} LBS</p> 
+          <p>{height?.imperial}</p>
+          <p>Peso:{weight && weight?.imperial} LBS</p> 
             <p className={Styles.diets}>Temperamentos: {temperament}</p>
             <p>{life_span}</p>
 

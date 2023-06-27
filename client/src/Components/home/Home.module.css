@@ -1,19 +1,24 @@
 .ulpg {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
 
+  background-color: silver;
+  border: 1px solid gray;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
 
   .container {
     display: flex;
+    
   }
   
   .options {
     flex: 0 ;
-    border: #676767;
+    border: #ff0000;
+    height: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, darkblue, #fff);
   }
   
   .cards {
@@ -36,4 +41,23 @@
   .myselect:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .lipg {
+  
+    margin: 0 5px;
+  }
+  
+  .buttonpg {
+  
+    background-color: steelblue;
+    color: white;
+    border: gray;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .buttonpg.active {
+    
+    background-color: darkblue;
   }

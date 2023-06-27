@@ -120,11 +120,13 @@ console.log(currentDogs)
 
     
     ))}
-    </div>
+    
+    
+     </div>
     <div>  <ul className={Styles.ulpg} >
         {pages.map((page) => (
-          <li /* className={Styles.lipg} */ key={page} >
-            <button /* className={`${Styles.buttonpg} ${currentPage === page ? Styles.active : ''}`} */
+          <li className={Styles.lipg}  key={page} >
+            <button className={`${Styles.buttonpg} ${currentPage === page ? Styles.active : ''}`} 
              onClick={() => handlePageChange(page)}>{page}</button>
           </li>
         ))}
